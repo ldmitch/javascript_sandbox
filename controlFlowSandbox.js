@@ -67,3 +67,26 @@ password = "uyg&^5rf56Ffa76WW!#gr";
 if (password.length >= 12 && (password.includes("!") || password.includes("@")) && !password.toLowerCase().includes("pass")) {
     console.log("That is a strong password.");
 }
+
+
+// SWITCH STATEMENTS:
+console.log("SWITCH STATEMENTS:");
+
+const grade = "D";
+
+switch(grade) {
+    case "A":
+        console.log("You got an A.");
+        break;
+    case "B":
+        console.log("You got a B.");
+        break;
+    case "C":
+        console.log("You got a C.");
+        break;
+    case "D":
+        console.log("You got a D.");
+        break;
+    default:
+        console.log("Not a valid grade.")
+}
