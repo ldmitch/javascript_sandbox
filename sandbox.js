@@ -12,6 +12,7 @@ Symbol: used with objects
 Variables can be reassigned to different types in JavaScript
 */
 
+
 // STRINGS:
 console.log("STRINGS:");
 
@@ -49,6 +50,7 @@ let html = `
 `
 console.log(html);
 
+
 // NUMBERS:
 console.log("NUMBERS:");
 
@@ -68,3 +70,22 @@ console.log(likes *= 10); // 70
 console.log(likes /= 2); // 35
 
 console.log(5 * "hello") // NaN
+
+
+// ARRAYS:
+console.log("ARRAYS:");
+
+let people = ["liam", "curtis", "agishan"];
+console.log(people);
+
+people[3] = "an jun";
+console.log(people[3]);
+
+people.push(25); // JavaScript arrays can have different data types
+
+console.log(people.join(", ")); // "liam, curtis, agishan, an jun, 25"
+console.log(people.indexOf("liam")); // 0
+
+people = people.concat(["jeevan", "jarren"]);
+console.log(people); // ['liam', 'curtis', 'agishan', 'an jun', 25, 'jeevan', 'jarren']
+console.log(people.pop()); // jarren
