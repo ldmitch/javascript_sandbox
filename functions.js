@@ -49,7 +49,7 @@ myFunc( // with arrow notation
 
 let people = ["Liam", "Curtis", "An Jun", "Agishan"];
 people.forEach(
-    (person, index) => {
+    (person, index) => { // each element, followed by its index, are the default arguments passed by forEach(), and they can be named whatever
         console.log(`${index} - Hello, ${person}.`);
     }
 );
