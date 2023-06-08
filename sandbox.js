@@ -114,3 +114,16 @@ age = 25;
 console.log(age == "25"); // true, strings are converted to numbers
 console.log(age === "25"); // false, tripequals means strict comparison
 console.log(age !== "25"); // true
+
+
+// TYPE CONVERSION:
+console.log("TYPE CONVERSION:");
+
+let score = "100"; // String
+score = Number(score); // Number
+console.log(score + 1); // 101
+
+console.log(Number("Hello")); // NaN
+console.log(String(50)); // "50"
+console.log(Boolean("Hello")); // all strings are true
+console.log(Boolean(0)); // false
