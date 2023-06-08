@@ -13,7 +13,7 @@ Variables can be reassigned to different types in JavaScript
 */
 
 // STRINGS:
-console.log("Hello, World");
+console.log("STRINGS:");
 
 let email = "liam.mitchell@uwaterloo.ca";
 console.log(email);
@@ -37,4 +37,34 @@ console.log(email.slice(0, 10)); // sliced string from index 0 to 10 ("liam.mitc
 console.log(email.substring(4, 10)); // substring from index 4 to 4+10 (second argument is length from start index)
 console.log(email.replace("liam.mitchell", "l5mitche")) // "l5mitche@uwaterloo.ca"
 
+let title = "Cool Blog";
+let author = "Liam";
+let likes = 20;
+console.log(`The blog called ${title} by ${author} has ${likes} likes.`) // notice backticks instead of quotation marks
+
+let html = `
+    <h2>${title}</h2>
+    <p>By ${author}</p>
+    <span>This blog has ${likes} likes.</span>
+`
+console.log(html);
+
 // NUMBERS:
+console.log("NUMBERS:");
+
+let radius = 10;
+const pi = 3.14159;
+console.log(radius, pi);
+
+console.log(radius % 3); // remainder 1
+console.log(pi * radius**2); // area of circle, pi * r^2
+console.log(5 * (10 - 3)**2); // BEDMAS applies
+
+likes = 10;
+likes = likes + 1; // 11
+likes++; // 12
+console.log(likes -= 5); // 7
+console.log(likes *= 10); // 70
+console.log(likes /= 2); // 35
+
+console.log(5 * "hello") // NaN
