@@ -2,7 +2,7 @@
 Number: integers, demicals (all floating point in JS)
 String: regular strings
 Boolean: regular booleans
-Null: must be explicitly set to variables with no value
+Null: must be explicitly set to variables with no value (intentional lack of value)
 Undefined: for variables that have not yet been defined
 Object: complex data structures (arrays, dates, literals, etc.)
 Symbol: used with objects
@@ -89,3 +89,28 @@ console.log(people.indexOf("liam")); // 0
 people = people.concat(["jeevan", "jarren"]);
 console.log(people); // ['liam', 'curtis', 'agishan', 'an jun', 25, 'jeevan', 'jarren']
 console.log(people.pop()); // jarren
+
+
+// NULL & UNDEFINED:
+console.log("NULL & UNDEFINED:");
+
+let age;
+console.log(age, age + 3, `the age is ${age}`) // undefined NaN 'the age is undefined'
+
+age = null;
+console.log(age); // null
+
+
+// BOOLEANS:
+console.log("BOOLEANS:");
+
+console.log(email.includes("@")); // true
+console.log(people.includes("liam")) // true
+console.log(age != null); // false
+console.log(firstName == "liam") // false, it's "Liam"
+console.log(firstName > "liam"); // false, lowercase letters are greater than uppercase in JavaScript
+
+age = 25;
+console.log(age == "25"); // true, strings are converted to numbers
+console.log(age === "25"); // false, tripequals means strict comparison
+console.log(age !== "25"); // true
