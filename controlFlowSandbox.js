@@ -90,3 +90,18 @@ switch(grade) {
     default:
         console.log("Not a valid grade.")
 }
+
+
+// BLOCK SCOPE:
+console.log("BLOCK SCOPE:");
+
+let num = 30;
+if (true) {
+    console.log(num); // 30
+}
+if (true) {
+    // console.log(num); cannot access, since the variable is initialized again in this scope
+    let num = 40;
+    console.log(num); // 40
+}
+console.log(num); // 30
