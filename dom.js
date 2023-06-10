@@ -43,7 +43,7 @@ console.log(content.innerHTML);
 content.innerHTML += "<h2>new h2 added to this div...</h2>";
 
 const names = ["Liam", "Curtis", "An Jun", "Agishan"];
-const peopleList = document.querySelector("ul.names");
+let peopleList = document.querySelector("ul.names");
 names.forEach(name => {
     peopleList.innerHTML += `<li>${name}</li>`;
 });
@@ -86,3 +86,10 @@ const paragraph1 = document.querySelector("p");
 console.log(paragraph1.classList);
 paragraph1.classList.add("error");
 paragraph1.classList.remove("style1");
+
+peopleList = document.querySelectorAll("ul li");
+peopleList.forEach(li => {
+    if (li.textContent.includes("Curtis")) {
+        li.classList.add("red");
+    }
+});
