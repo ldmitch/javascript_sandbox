@@ -77,3 +77,12 @@ title.style.margin = "50px";
 title.style.textAlign = "center";
 title.style.color = "steelblue"; // no longer resets previous styling
 title.style.margin = ""; // removes margin
+
+
+// MODIFYING CLASSES:
+console.log("MODIFYING CLASSES");
+
+const paragraph1 = document.querySelector("p");
+console.log(paragraph1.classList);
+paragraph1.classList.add("error");
+paragraph1.classList.remove("style1");
