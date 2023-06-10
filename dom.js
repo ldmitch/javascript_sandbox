@@ -14,3 +14,11 @@ const errors = document.querySelectorAll(".error");
 errors.forEach(error => {
     console.log(error);
 });
+
+
+// QUERY BY ID, CLASS NAME, AND TAG NAME:
+console.log("QUERY BY ID, CLASS NAME, AND TAG NAME:");
+
+console.log(document.getElementById("page-title"));
+console.log(document.getElementsByClassName("error"));
+console.log(document.getElementsByTagName("p"));
