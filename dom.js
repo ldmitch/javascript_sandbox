@@ -63,4 +63,17 @@ const divError = document.querySelector("div.error");
 divError.setAttribute("class", "success");
 divError.innerText = "Success div right here"
 console.log(divError.getAttribute("class"));
-divError.setAttribute("style", "background-color: green; color: white;"); // can even style elements
+
+
+// STYLING:
+console.log("STYLING:");
+
+divError.setAttribute("style", "background-color: green; color: white;");
+divError.setAttribute("style", "background-color: green;"); // removes the previous styling, so text is set back to black
+
+const title = document.querySelector("h1#page-title");
+console.log(title.style);
+title.style.margin = "50px";
+title.style.textAlign = "center";
+title.style.color = "steelblue"; // no longer resets previous styling
+title.style.margin = ""; // removes margin
