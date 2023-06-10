@@ -47,3 +47,20 @@ const peopleList = document.querySelector("ul.names");
 names.forEach(name => {
     peopleList.innerHTML += `<li>${name}</li>`;
 });
+
+
+// UPDATING TAG ATTRIBUTES:
+console.log("UPDATING TAG ATTRIBUTES:");
+
+const link = document.querySelector("a");
+console.log(link.getAttribute("href")); // URL to my GitHub profile
+link.setAttribute("href", "https://github.com/");
+console.log(link.getAttribute("href"));
+
+console.log(peopleList.getAttribute("class"));
+
+const divError = document.querySelector("div.error");
+divError.setAttribute("class", "success");
+divError.innerText = "Success div right here"
+console.log(divError.getAttribute("class"));
+divError.setAttribute("style", "background-color: green; color: white;"); // can even style elements
