@@ -57,8 +57,14 @@ const getSomething = (resource) => {
     });
 };
 
-getSomething("todos.json").then((data) => {
-    console.log("Promise resolved:", data);
+getSomething("todos.json").then(data => {
+    console.log("Promise 1 resolved:", data);
+    return getSomething("other.json");
+}).then(data => {
+    console.log("Promise 2 resolved:", data);
+    return getSomething("other2.json");
+}).then(data => {
+    console.log("Promise 3 returned:", data);
 }).catch(err => {
     console.log("Promise rejected:", err);
 });
