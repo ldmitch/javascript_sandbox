@@ -23,7 +23,7 @@ const getTodos = (resource, callback) => {
     request.send();
 }
 
-getTodos("todos.json", (err, data) => {
+/* callback hell: getTodos("todos.json", (err, data) => {
     console.log("Callback fired...");
     if (err) {
         console.log(`Code ${err}, could not fetch data...`);
@@ -38,4 +38,27 @@ getTodos("todos.json", (err, data) => {
             console.log(data);
         }
     });
+}); */
+
+const getSomething = (resource) => {
+    return new Promise((resolve, reject) => {
+        const request = new XMLHttpRequest();
+        request.addEventListener("readystatechange", () => {
+            // console.log(request, request.readyState);
+            if (request.readyState === 4 && request.status === 200) {
+                const data = JSON.parse(request.responseText);
+                resolve(data);
+            } else if (request.readyState === 4) {
+                reject(`Error getting resource: Status ${request.status}`);
+            }
+        });
+        request.open("GET", resource);
+        request.send();
+    });
+};
+
+getSomething("todos.json").then((data) => {
+    console.log("Promise resolved:", data);
+}).catch(err => {
+    console.log("Promise rejected:", err);
 });
